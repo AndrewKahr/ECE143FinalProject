@@ -18,7 +18,7 @@ def v_count_plot(df,y_name,x_name,p_title):
     disorder_num=list(MH_dict.values())
     y=np.arange(len(disorder_name))
     ax.barh(y,disorder_num ,color='g')
-    ax.set_yticks(y,labels=disorder_name,fontsize=21)
+    plt.set_yticks(y,disorder_name,fontsize=21)
     ax.invert_yaxis()
     ax.tick_params(axis='x',labelsize=21)
     ax.set_xlabel(x_name,fontsize=21)
