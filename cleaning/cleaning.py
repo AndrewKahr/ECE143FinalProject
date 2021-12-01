@@ -78,7 +78,7 @@ def to_1D(series):
     Converts input to a panda compatible series so functions
     like value_counts works on lists
     """
-    assert isinstance(pd.Series)
+    assert isinstance(series, pd.Series)
     return pd.Series([x for _list in series for x in _list])
 
 
