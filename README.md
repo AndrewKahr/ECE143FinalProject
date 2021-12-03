@@ -1,6 +1,6 @@
 # Group 3: Analysis of Mental Health Trends in Tech
 This repo contains our data and code to generate the visualizations in our presentation. You can view our presentation 
-by looking at the `Group 19 Mental Health in Tech Slides.pdf` file.
+by looking at the `Group 3 Mental Health in Tech Slides.pdf` file.
 
 # File structure
 The `data` folder contains the csv files from 2016 to 2020 for the survey questions. There are also 5 python files that 
@@ -24,7 +24,7 @@ The repo also contains a requirements.txt at the root of the repo to generate a 
 # How to run the code
 First create a new conda environment with the requirements.txt file by running the following: 
 `conda create --name <env_name> --file requirements.txt`. Replace `<env_name>` with the name you want to give the environment.
-Then navigate to the `Group 19 Mental Health in Tech.ipynb` 
+Then navigate to the `Group 3 Mental Health in Tech.ipynb` 
 and open it with Jupyter Notebook. This notebook will call the appropriate functions and generate our data visualizations.
 
 # Main Packages
