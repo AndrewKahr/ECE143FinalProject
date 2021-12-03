@@ -9,7 +9,7 @@ def line_graph(data, title):
         data ([list]): [list of graphing data for each year]
         title ([string]): [title of the graph]
     """    
-    assert isinstance(data, list)
+    assert isinstance(data, np.ndarray)
     assert isinstance(title, str)
     fig, ax = plt.subplots(figsize=(10,5))
     ax.set_ylim([0,100])
@@ -30,9 +30,9 @@ def line_graph_double(data1, data2, legend1, legend2, title):
         legend2 ([string]): [legend name of data 2]
         title ([string]): [title of the graph]
     """    
-    assert isinstance(data1, list)
+    assert isinstance(data1, np.ndarray)
     assert isinstance(title, str)
-    assert isinstance(data2, list)
+    assert isinstance(data2, np.ndarray)
     assert isinstance(legend1, str)
     assert isinstance(legend2, str)
     fig, ax = plt.subplots(figsize=(10,5))
