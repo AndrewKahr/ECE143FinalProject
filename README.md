@@ -1,4 +1,4 @@
-# Group 19: Analysis of Mental Health Trends in Tech
+# Group 3: Analysis of Mental Health Trends in Tech
 This repo contains our data and code to generate the visualizations in our presentation. You can view our presentation 
 by looking at the `Group 19 Mental Health in Tech Slides.pdf` file.
 
