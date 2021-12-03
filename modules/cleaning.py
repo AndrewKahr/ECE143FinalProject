@@ -11,6 +11,11 @@ important_disorders = {'Mood Disorder (Depression, Bipolar Disorder, etc)',
 
 
 def make_diagnosed_disorder_col(df):
+    """
+    Converts the diagnosed disorders column datatype to a list
+    :param df: Dataframe to convert the column datatype on
+    :return: List with the converted values to replace the current datatype
+    """
     assert isinstance(df, pd.DataFrame)
     return [
         [x if (isinstance(x, str) and x in important_disorders) else 'Other' for x in disorders if isinstance(x, str)]
@@ -18,6 +23,11 @@ def make_diagnosed_disorder_col(df):
 
 
 def make_believed_disorder_col(df):
+    """
+    Converts the believed disorders column datatype to a list
+    :param df: Dataframe to convert the column datatype on
+    :return: List with the converted values to replace the current datatype
+    """
     assert isinstance(df, pd.DataFrame)
     return [
         [x if (isinstance(x, str) and x in important_disorders) else 'Other' for x in disorders if isinstance(x, str)]
@@ -29,6 +39,10 @@ def gender_standardization(gender, male_list, female_list):
     Standardizes genders to integer values based on the string lists
     provided in male_list and female_list. Returns 0 for male, 1 for female,
     2 for other, and -1 for null entries.
+    :param gender: The input gender to standardize
+    :param male_list: List of valid strings for males
+    :param female_list: List of valid strings for females
+    :return: The standardized value for the corresponding gender
     """
     if isinstance(gender, int) and gender == -1:
         return -1
@@ -47,6 +61,8 @@ def standardize_disorders(disorders):
     """
     Standardizes the list of disorders
     from a string into a list of strings
+    :param disorders: A string input to convert to a list of disorders
+    :return: List of disorders parsed from the string
     """
     if isinstance(disorders, int):
         return []
@@ -77,12 +93,18 @@ def to_1D(series):
     """
     Converts input to a panda compatible series so functions
     like value_counts works on lists
+    :param: A pd series to convert from a list type into a proper series
+    :return: A pd series
     """
     assert isinstance(series, pd.Series)
     return pd.Series([x for _list in series for x in _list])
 
 
 def get_cleaned_df():
+    """
+    Imports all of our data, cleans it accordinly, merges the data into one dataframe, and returns the merged data
+    :return: A pd dataframe with our cleaned and merged data
+    """
     data_2016 = pd.read_csv('data/OSMI 2016 Mental Health in Tech Survey Results.csv')
     data_2017 = pd.read_csv('data/OSMI 2017 Mental Health in Tech Survey Results.csv')
     data_2018 = pd.read_csv('data/OSMI 2018 Mental Health in Tech Survey Results.csv')
