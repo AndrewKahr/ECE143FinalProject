@@ -1,5 +1,6 @@
 # Group 19: Analysis of Mental Health Trends in Tech
-This repo contains our data and code to generate the visualizations in our presentation. 
+This repo contains our data and code to generate the visualizations in our presentation. You can view our presentation 
+by looking at the `Group 19 Mental Health in Tech Slides.pdf` file.
 
 # File structure
 The `data` folder contains the csv files from 2016 to 2020 for the survey questions. There are also 5 python files that 
