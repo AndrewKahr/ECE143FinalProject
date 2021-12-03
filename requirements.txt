@@ -1,9 +1,9 @@
 # This file may be used to create an environment using:
-# $ conda create --name <env> --file requirements.txt
+# $ conda create --name <env> --file <this file>
+python=3.8.1
+pip
 numpy
 pandas
-pip
-python=3.8.1
 seaborn
 jupyter
 matplotlib
